@@ -1,1 +1,19 @@
-<div id="container"></div>
+<body>
+    <div class="customDiv" >
+        <mat-checkbox [checked]="true" (change)="handleTopics(1)"  >Confirmed*</mat-checkbox>
+        <mat-checkbox (change)="handleTopics(3)" >Deaths*</mat-checkbox>
+        <mat-checkbox (change)="handleTopics(7)" >Retail and recreation</mat-checkbox>
+        <mat-checkbox (change)="handleTopics(8)" >Grocery</mat-checkbox>
+        <mat-checkbox (change)="handleTopics(10)" >Stations</mat-checkbox>
+    </div>
+    
+    <mat-grid-list cols="3" rowHeight="1.2:1">
+        <mat-grid-tile *ngFor="let c of countries">
+            <div id={{c}}></div>
+        </mat-grid-tile>
+    </mat-grid-list>
+      
+    <div id="container"></div>
+    
+    <p>*WHEN COMPARED WITH MOBILITY NUMBERS, CONFIRMED AND DEATH NUMBERS ARE DIVIDED BY 100</p>    
+</body>

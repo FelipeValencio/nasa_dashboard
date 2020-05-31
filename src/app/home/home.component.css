@@ -1,0 +1,11 @@
+.customDiv{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.mat-checkbox {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
