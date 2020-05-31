@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http/http.service';
 import * as Highcharts from 'highcharts';
-import { Data } from '../entity/data';
 
 declare var require: any;
 let Boost = require('highcharts/modules/boost');
@@ -18,6 +17,7 @@ noData(Highcharts);
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
   constructor(
@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
   }
 
   public options: any = {
-
     chart: {
       type: 'line'
     },
@@ -44,14 +43,15 @@ export class HomeComponent implements OnInit {
         text: 'Contaminado sla'
       }
     },
-    plotOptions: {
+    //NUMERO NAS LINHAS
+    /* plotOptions: {
       line: {
         dataLabels: {
           enabled: true
         },
         enableMouseTracking: false
       }
-    },
+    }, */
     series: [],
   }
 
@@ -82,3 +82,8 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+//FAZER TELA PARA CADA PAÍS
+//ng generate component (gerar componente)
+//Highcharts.chart('container', this.options); gerar div com tag container no html
+//ng serve para compilar
